@@ -9,3 +9,6 @@ RUN apt-get update && yes | apt-get upgrade && yes | apt-get install wget \
 RUN mkdir ~/minio
 EXPOSE 9001
 EXPOSE 9000
+COPY start.sh start.sh
+
+CMD chmod +x start.sh; ./start.sh
