@@ -6,7 +6,6 @@ RUN apt-get update && yes | apt-get upgrade && yes | apt-get install wget \
     && wget https://dl.min.io/client/mc/release/linux-amd64/mc \
     && chmod +x mc && mv mc /usr/local/bin/
 
-
 COPY start.sh start.sh
 COPY 123.txt 123.txt
 COPY loader.py loader.py
