@@ -4,7 +4,7 @@ sleep 2
 
 mc alias set ${MINIO_ALIAS} http://localhost:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD}
 mc admin accesskey create ${MINIO_ALIAS} --access-key ${ADMIN_ACCESS_KEY} --json > keys.json
-SECRET_KEY=`python3 parse_keys.py`
+SECRET_KEY=`python3 keyParser.py`
 mc config host add ${MINIO_ALIAS} http://localhost:9000 ${ADMIN_ACCESS_KEY} ${SECRET_KEY}
 mc admin info ${MINIO_ALIAS}
 
