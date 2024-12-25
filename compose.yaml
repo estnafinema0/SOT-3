@@ -21,3 +21,17 @@ services:
       MINIO_ALIAS: HeyHeyHey
       MAIN_BUCKET: mybucket
     mem_limit: 2gb
+
+  client:
+    ports:
+      - "9001:9001"
+      - "9000:9000"
+    depends_on:
+      - web
+    network_mode: "host"
+    build: ./client
+    environment:
+      USER_ACCESS_KEY: oblakaKey
+      USER_SECRET_KEY: b7IoXuR+Jk+pCceEhLpD4vQ3VXG3rmtRDcMF1EHL
+      MINIO_ALIAS: HeyHeyHey
+      MAIN_BUCKET: mybucket
