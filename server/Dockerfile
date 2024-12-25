@@ -7,8 +7,12 @@ RUN apt-get update && yes | apt-get upgrade && yes | apt-get install wget \
     && chmod +x mc && mv mc /usr/local/bin/
 
 RUN mkdir ~/minio
+
 EXPOSE 9001
 EXPOSE 9000
+
 COPY start.sh start.sh
+
+COPY keyParser.py keyParser.py
 
 CMD chmod +x start.sh; ./start.sh
