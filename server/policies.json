@@ -4,7 +4,7 @@
       {
         "Action": ["s3:GetObject", "s3:PutObject", "s3:ListBucket"],
         "Effect": "Allow",
-        "Resource": ["arn:aws:s3:::blackhole/*"]
+        "Resource": ["arn:aws:s3:::mybucket/*"]
       }
     ]
   }

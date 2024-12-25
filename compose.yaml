@@ -16,12 +16,11 @@ services:
       MINIO_ROOT_USER: Oblaka
       MINIO_ROOT_PASSWORD: OblakaPass
       ADMIN_ACCESS_KEY: RTFM_abobaC70FLRMN0V
+      MINIO_ALIAS: HeyHeyHey
       USER_ACCESS_KEY: oblakaKey
       USER_SECRET_KEY: b7IoXuR+Jk+pCceEhLpD4vQ3VXG3rmtRDcMF1EHL
-      MINIO_ALIAS: HeyHeyHey
       MAIN_BUCKET: mybucket
-    mem_limit: 2gb
-
+    mem_limit: 145mb
   client:
     ports:
       - "9001:9001"
