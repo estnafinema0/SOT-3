@@ -1,6 +1,6 @@
-# S3-совместимое объектное хранилище с MiniO
+# S3-Compatible Object Storage with MiniO
 
-Этот проект демонстрирует настройку объектного хранилища данных на основе MiniO, развернутого в Docker. Хранилище имеет ограничения на объем диска, настроенные политики вытеснения данных и автоматизированный процесс загрузки тестовых данных. В проекте также представлены инструкции для демонстрации работы системы при достижении лимита дискового пространства.
+This project demonstrates the setup of an S3-compatible object storage system using MiniO in a Docker container. The storage is configured with disk space limitations, an eviction policy, and automation through Docker Compose. It includes a data uploader container to simulate reaching the disk limit and showcases the behavior of the system under these conditions.
 
 ## See client work and fail
 
