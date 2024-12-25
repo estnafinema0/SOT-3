@@ -11,7 +11,13 @@ Project is realised as a part of the study of "Cloud technologies" special cours
 It will start both containers in the background.
 
 ```bash
-sudo docker-compose up --build
+sudo docker-compose build
+```
+
+To run the conteiners
+
+```bash
+sudo docker compose up
 ```
 
 The web setups will be run it the terminal.
@@ -28,21 +34,21 @@ MINIO_ROOT_PASSWORD: OblakaPass
 ```
 There will be shown loaded in bucket files.
 
-## See client work and fail
+## See client work and fail in two terminals
+
+In the server folder:
+
+```bash
+sudo docker compose run --rm web
+```
+
+In the client folder:
 
 ```bash
 sudo docker compose run --rm client
 ```
 
-Should fail on "big" transfer and on around 300-400 looped transfer
-
-## See web and client work
-
-```bash
-sudo docker compose up
-```
-
-On server nothing interesting actually happens, when limit gets exceeded
+Should fail on "big" data transfer and on around 350-400 looped transfer of images
 
 ## Removing containers
 
@@ -51,3 +57,4 @@ When you are done testing:
 ```bash
 sudo docker compose down
 ```
+You should down server before each new instances ("up"'s) of contaners.
