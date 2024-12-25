@@ -1,0 +1,20 @@
+networks:
+  default:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.42.12.0/29
+          gateway: 172.42.12.1
+
+services:
+  web:
+    build: ./server
+    ports:
+      - "9001:9001"
+      - "9000:9000"
+    environment:
+      MINIO_ROOT_USER: Tepumasuta
+      MINIO_ROOT_PASSWORD: ILoveKate
+      ADMIN_ACCESS_KEY: RTFM_abobaC70FLRMN0V
+      MINIO_ALIAS: myminio
+    mem_limit: 2gb
