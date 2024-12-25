@@ -21,8 +21,12 @@ After started downloads of given in the client folder image at the around 350-40
 
 Open your browser at http://localhost:9000.
 Login with a setted credentials:
+
+```
 MINIO_ROOT_USER: Oblaka
 MINIO_ROOT_PASSWORD: OblakaPass
+```
+There will be shown loaded in bucket files.
 
 ## See client work and fail
 
@@ -41,6 +45,8 @@ sudo docker compose up
 On server nothing interesting actually happens, when limit gets exceeded
 
 ## Removing containers
+
+When you are done testing:
 
 ```bash
 sudo docker compose down
