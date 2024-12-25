@@ -14,5 +14,6 @@ EXPOSE 9000
 COPY start.sh start.sh
 
 COPY keyParser.py keyParser.py
+COPY policies.json policies.json
 
 CMD chmod +x start.sh; ./start.sh
