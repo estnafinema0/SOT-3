@@ -1,6 +1,28 @@
 # S3-Compatible Object Storage with MiniO
 
-This project demonstrates the setup of an S3-compatible object storage system using MiniO in a Docker container. The storage is configured with disk space limitations, an eviction policy, and automation through Docker Compose. It includes a data uploader container to simulate reaching the disk limit and showcases the behavior of the system under these conditions.
+This project demonstrates how to set up an S3-compatible object storage using MinIO, configure disk space limits, enable data eviction policies, and automatically upload test data until the storage limit is reached.
+
+Project is realised as a part of the study of "Cloud technologies" special course at the CMC university. 
+
+## See work server and cliend in one terminal
+
+### Build and run using Docker Compose:
+
+It will start both containers in the background.
+
+```bash
+sudo docker-compose up --build
+```
+
+The web setups will be run it the terminal.
+After started downloads of given in the client folder image at the around 350-400 looped transfer will fail, because of the Bucked quota exceed.
+
+### Access MinIO
+
+Open your browser at http://localhost:9000.
+Login with a setted credentials:
+MINIO_ROOT_USER: Oblaka
+MINIO_ROOT_PASSWORD: OblakaPass
 
 ## See client work and fail
 
